@@ -1,0 +1,26 @@
+body {
+  background-color:#73c6b6;
+}
+h1 {
+  color: #ca6f1e; 
+  font-family:arial;
+  font-size:120px;
+  text-align:center;
+  border: 10px solid red;
+  padding: 5px;
+  margin: 10px;
+}
+h2 {
+  color: #ca6f1e;
+}
+p {
+  color: black;
+}
+div.threecolumns {
+  width:100%;
+  overflow:auto;
+}
+div.threecolumns div {
+  width:33%;  
+  float:left;
+}
