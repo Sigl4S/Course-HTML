@@ -25,6 +25,22 @@ div.threecolumns div {
   float:left;
 }
 
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #00AA00;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
 
 .main_head {
   color: #ca6f1e; 
