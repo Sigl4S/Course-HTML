@@ -33,7 +33,7 @@
             <div class="menuitem"><a href="#Table">Table</a></div>
             <div class="menuitem"><a href="#footer">Footer</a></div>
         </nav>
-        <article class="main" style="background-color:#85c1e9;color:black;">
+        <article class="main" style="background-color:#85c1e9;color:black;border-radius:3vw;">
             <h2>
                 <i>
                 whiswasbullshit.<abbr title ="What the Fuck">wtf</abbr>
@@ -126,7 +126,26 @@ an its bad poetry</pre>
                 </tr>
             </table>
         </div>
+        <div class="main" id="Form" style="margin:10px 0;background-color:'gray';border: 1px solid black;border-radius:5px;"|
+            <form action="https://www.w3schools.com/action_page.php" sytyle="padding:10px;" method="post">
+                <label for="gesch" style="margin-top:5px;"> Geschlecht:</label><br>
+                <input list="gesch_list" name="gesch" id="gesch">
+                <datalist id="gesch_list">
+                    <option value="Female">
+                    <option value="Male">
+                    <option value="Non Binary">
+                    <option value="Rather not say">
+                </datalist><br>
+                <label for="fname" >Your first Name:</label><br>
+                <input type="text" id="fname" name="fname" value="John"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                <input type="submit" value="Submit" style="margin-bottom:5px;" onclick="alert('Data sent')">
+            </form>
+        </div>
     </div>
+    
+    
     
     <footer class="footer" id="footer">
         <address>

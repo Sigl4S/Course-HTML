@@ -1,5 +1,6 @@
 body {
     background-color:#f7f7f7;
+    font-family: 'courier new', 'monospace'
 }
 
 h2 {
@@ -11,6 +12,17 @@ p {
     padding: 20px;
     color: black;
 }
+
+label {
+    margin-left: 5px;
+}
+input {
+    margin-left: 5px;
+}
+select {
+    margin-left: 5px;
+}
+
 
  /*classes*/
 
@@ -26,7 +38,8 @@ div.threecolumns div {
 }
 
 table {
-  font-family: arial, sans-serif;
+  font-family: monospace;
+  font-size: 0.875em;
   border-collapse: collapse;
   width: 100%;
 }
@@ -44,11 +57,12 @@ tr:nth-child(even) {
 
 .main_head {
   color: #ca6f1e; 
-  font-family:arial;
-  font-size:11.3vw;
+  font-family:'courier new';
+  font-size:9vw;
   font-weight:bold;
   text-align:center;
   border: 1vw solid red;
+  border-radius: 3vw;
   padding: 0;
   margin: 10px 0;
 }
@@ -65,9 +79,9 @@ tr:nth-child(even) {
 }
 .main {
     float: left;
-    width: 81%;
-    padding: 10 px;
-    margin: 10 px;
+    width: 80%;
+    padding: 0px;
+    margin-left: 1%;
     overflow: hidden;
 }
 
