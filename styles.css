@@ -8,6 +8,10 @@ h2 {
     padding: 0 20px;
 }
 
+h3 {
+    padding: 0 20px;
+}
+
 p {
     padding: 20px;
     color: black;
@@ -78,7 +82,7 @@ tr:nth-child(even) {
     border-bottom: 1px solid #73c6b6;
 }
 .main {
-    float: left;
+    float: right;
     width: 80%;
     padding: 0px;
     margin-left: 1%;

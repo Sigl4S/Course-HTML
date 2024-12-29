@@ -14,6 +14,43 @@
             function myFunction() {
             document.getElementById("roast").innerHTML = "Hello JavaScript!";
             }
+            
+
+            function getLocation() {
+              if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+              } else {
+                document.getElementById("PGeo").innerHTML = "Geolocation is not supported by this browser.";
+              }
+            }
+
+            function watchLocation() {
+              if (navigator.geolocation) {
+                navigator.geolocation.watchPosition(showPosition, showError);
+              } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+              }
+            }
+            function showPosition(position) {
+              document.getElementById("PGeo").innerHTML = "Latitude: " + position.coords.latitude +
+              "<br>Longitude: " + position.coords.longitude;
+            }
+            function showError(error) {
+              switch(error.code) {
+                case error.PERMISSION_DENIED:
+                  x.innerHTML = "User denied the request for Geolocation."
+                  break;
+                case error.POSITION_UNAVAILABLE:
+                  x.innerHTML = "Location information is unavailable."
+                  break;
+                case error.TIMEOUT:
+                  x.innerHTML = "The request to get user location timed out."
+                  break;
+                case error.UNKNOWN_ERROR:
+                  x.innerHTML = "An unknown error occurred."
+                  break;
+              }
+            }
         </script>
 
 	</head>
@@ -31,6 +68,7 @@
             <div class="menuitem"><a href="#uplift">Uplift</a></div>
             <div class="menuitem"><a href="#poem">Poem</a></div>
             <div class="menuitem"><a href="#Table">Table</a></div>
+            <div class="menuitem"><a href="#geo">Geolocation</a></div>
             <div class="menuitem"><a href="#footer">Footer</a></div>
         </nav>
         <article class="main" style="background-color:#85c1e9;color:black;border-radius:3vw;">
@@ -70,7 +108,8 @@
         </article>
 
         <!-- image rights not yet obtained-->
-        <figure class="main" style="display: block;margin:0px";>
+        <figure class="main" style="display: block;margin:0px;">
+            <h3>Image Integration</h3>
             <img src="C:\Users\lucas\OneDrive\Documents\Hobby\AA_Roadmap\HTML\wtf.gif" alt="WTF gif" width="30%">
         </figure>
         <nav class="main">
@@ -79,6 +118,7 @@
             </p>
         </nav>
         <div class="threecolumns" id="poem1">
+        <h3>A Poem</h3>
             <div style="background-color:#FFF4A3;">
                 <pre style="padding-left:20px;padding-right:20px;" id="poem">
 This is a poem
@@ -103,6 +143,7 @@ an its bad poetry</pre>
             <cite>Poem of Bullshit</cite> by Sigl4S. Written while learning HTML
         </div>
         <div class="main" id="Table" style="margin:10px 0;">
+            <h3>Table</h3>
             <table>
                 <tr>
                     <th>Company</th>
@@ -126,7 +167,8 @@ an its bad poetry</pre>
                 </tr>
             </table>
         </div>
-        <div class="main" id="Form" style="margin:10px 0;background-color:'gray';border: 1px solid black;border-radius:5px;"|
+        <div class="main" id="Form" style="margin:10px 0;background-color:'gray';border: 1px solid black;border-radius:5px;">
+            <h3>Forms</h3>
             <form action="https://www.w3schools.com/action_page.php" sytyle="padding:10px;" method="post">
                 <label for="gesch" style="margin-top:5px;"> Geschlecht:</label><br>
                 <input list="gesch_list" name="gesch" id="gesch">
@@ -142,6 +184,15 @@ an its bad poetry</pre>
                 <input type="text" id="lname" name="lname" value="Doe"><br><br>
                 <input type="submit" value="Submit" style="margin-bottom:5px;" onclick="alert('Data sent')">
             </form>
+        </div>
+        <div class="main" id="geo" style="margin:10px 0;background-color:'gray';border: 1px solid black;border-radius:5px;">
+            <h3> Geolocation API</h3>
+            <p id="PGeo">
+                To get your location once, press the button.
+                To get regular updates to your location, press the "watch position" button.
+            </p>
+            <button type="button" onclick="getLocation()" style="margin-left:20px;margin-bottom:15px;">Geolocation</button>
+            <button type="button" onclick="watchLocation()" style="margin-left:20px;margin-bottom:15px;">Watch position</button>
         </div>
     </div>
     
