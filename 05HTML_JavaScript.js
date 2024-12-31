@@ -1,8 +1,13 @@
-
+//------------------------------------------------
+//Javascript Tryout
+//------------------------------------------------
 function myFunction() {
 document.getElementById("roast").innerHTML = "Hello JavaScript!";
 }
 
+//------------------------------------------------
+//Geolocation API Tryout
+//------------------------------------------------
 
 const x = document.getElementById("PGeo");
 
@@ -41,3 +46,7 @@ function showError(error) {
       break;
   }
 }
+
+//------------------------------------------------
+//Drag-and-Drop Tryout
+//------------------------------------------------
