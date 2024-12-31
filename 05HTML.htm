@@ -151,6 +151,15 @@ an its bad poetry</pre>
             <button type="button" onclick="getLocation()" style="margin-left:20px;margin-bottom:15px;">Geolocation</button>
             <button type="button" onclick="watchLocation()" style="margin-left:20px;margin-bottom:15px;">Watch position</button>
         </div>
+        <div class="main" id="DND" style="margin:10px 0;background-color:'gray';border: 1px solid black;border-radius:5px;">
+            <h3> Drag and Drop API</h3>
+            <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img src="img_w3slogo.gif" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+            </div>
+
+            <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+        </div>
     </div>
     
     
