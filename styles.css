@@ -111,4 +111,7 @@ tr:nth-child(even) {
     }
 }
 
+#result{
+    padding: 20px;
+}
 
