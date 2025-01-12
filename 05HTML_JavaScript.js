@@ -79,3 +79,29 @@ function clickCounter() {
     document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
   }
 }
+
+//------------------------------------------------
+//WebWorkers Tryout
+//------------------------------------------------
+var w;
+
+function startWorker() {
+
+  if(typeof(Worker) !== "undefined") {    
+    if(typeof(w) == "undefined") {
+      document.getElementById("WWresult").innerHTML = "started";
+      w = new Worker("05HTML_JS_Workers.js");
+    }
+    w.onmessage = function(event) {
+      document.getElementById("WWresult").innerHTML = event.data;
+    };
+  } else {
+    document.getElementById("WWresult").innerHTML = "Sorry, your browser does not support Web Workers...";
+  }
+}
+
+function stopWorker() {
+    document.getElementById("WWresult").innerHTML = "stopped";    
+  w.terminate();
+  w = undefined;
+}
